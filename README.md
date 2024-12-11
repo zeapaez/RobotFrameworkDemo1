@@ -2,7 +2,9 @@ This is a demo repository of Robot Framework, which includes testing of various 
 
 If you want to download it to try it out, go ahead.
 
-To run it, go to the project path, and to run everything just type and later ENTER: 'robot .' (without the single quotes)
+To run it, go to the project path, and to run everything just excute this command: 'robot .' (without the single quotes)
+
+If you want to run everything in parallel, please go to the project path and run the following command: pabot ./tests
 
 ![image](https://github.com/user-attachments/assets/e067b817-40de-45fe-9034-54186fbf4469)
 
