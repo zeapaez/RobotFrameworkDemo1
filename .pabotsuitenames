@@ -1,0 +1,11 @@
+datasources:add815d7bfe951596948fdd20869ab665828a444
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:0fc30a0162d12bd86212fd760817e7168d7b5f36
+--suite Tests.AddItemsToCart
+--suite Tests.testTemplateWithDataDriver
+--suite Tests.testWithCustomLibrary
+--suite Tests.testWithKeywordAsResource
+--suite Tests.testWithKeywordWith2Resources
+--suite Tests.testWithLocalKeyword
+--suite Tests.testWithTemplate1

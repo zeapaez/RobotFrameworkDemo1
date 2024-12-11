@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-04T01:02:29.251013" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\zeapa\Repository\RobotFramework\RobotFramework1\tests">
+<suite id="s1-s1" name="testWithLocalKeyword" source="C:\Users\zeapa\Repository\RobotFramework\RobotFramework1\tests\testWithLocalKeyword.robot">
+<test id="s1-s1-t1" name="Validate Unsuccessful login" line="13">
+<kw name="Open Browser with Login portal">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:29.677117" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${BROWSER}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-12-04T01:02:29.676789" elapsed="15.553316"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:45.230764" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.230433" elapsed="1.968027"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-04T01:02:47.199114" elapsed="0.388748"/>
+</kw>
+<status status="PASS" start="2024-12-04T01:02:29.675653" elapsed="17.914638"/>
+</kw>
+<kw name="Fill the Login Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:47.593808" level="INFO">Typing text 'antonio@automation.com' into text field '//input[@id='username']'.</msg>
+<arg>//input[@id='username']</arg>
+<arg>antonio@automation.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-04T01:02:47.592581" elapsed="0.519774"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:48.113223" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-12-04T01:02:48.150983" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>demo1234</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-04T01:02:48.112784" elapsed="0.062972"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:48.176489" level="INFO">Clicking button 'id:signInBtn'.</msg>
+<arg>id:signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-04T01:02:48.176074" elapsed="0.290567"/>
+</kw>
+<status status="PASS" start="2024-12-04T01:02:47.591361" elapsed="0.875581"/>
+</kw>
+<kw name="Wait until it checks and display error message">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.alert.alert-danger.col-md-12</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-04T01:02:48.467769" elapsed="2.002612"/>
+</kw>
+<status status="PASS" start="2024-12-04T01:02:48.467262" elapsed="2.003329"/>
+</kw>
+<kw name="Verify error message is correct">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:50.494724" level="INFO">${textMessage} = Incorrect username/password.</msg>
+<var>${textMessage}</var>
+<arg>css:.alert.alert-danger</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-04T01:02:50.471268" elapsed="0.023747"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${textMessage}</arg>
+<arg>${Error_message_Login}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-04T01:02:50.495320" elapsed="0.000491"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:50.496455" level="INFO">Verifying element 'css:.alert.alert-danger' contains exact text 'Incorrect username/password.'.</msg>
+<arg>css:.alert.alert-danger</arg>
+<arg>${Error_message_Login}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-12-04T01:02:50.496057" elapsed="0.036357"/>
+</kw>
+<status status="PASS" start="2024-12-04T01:02:50.470839" elapsed="0.061771"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-04T01:02:50.532923" elapsed="5.455198"/>
+</kw>
+<tag>invalidLogin</tag>
+<tag>smokeTest</tag>
+<status status="PASS" start="2024-12-04T01:02:29.674623" elapsed="26.313692"/>
+</test>
+<test id="s1-s1-t2" name="Login Button Should Be Visible" line="20">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:55.992070" level="INFO">Opening browser 'Firefox' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-04T01:02:55.991614" elapsed="12.514582"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-04T01:03:08.506483" elapsed="0.303513"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@id='login-column']</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-04T01:03:08.810360" elapsed="0.059175"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:03:08.881105" level="INFO">Current page contains element '//div[@id='login-column']'.</msg>
+<arg>//div[@id='login-column']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-12-04T01:03:08.869918" elapsed="0.011361"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-04T01:03:08.881775" elapsed="3.227319"/>
+</kw>
+<tag>smokeTest</tag>
+<status status="PASS" start="2024-12-04T01:02:55.989862" elapsed="16.119402"/>
+</test>
+<doc>To validate the Login Page</doc>
+<status status="PASS" start="2024-12-04T01:02:29.305900" elapsed="42.804094"/>
+</suite>
+<status status="PASS" start="2024-12-04T01:02:29.281530" elapsed="42.832282"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">invalidLogin</stat>
+<stat pass="2" fail="0" skip="0">smokeTest</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="testWithLocalKeyword">Tests.testWithLocalKeyword</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

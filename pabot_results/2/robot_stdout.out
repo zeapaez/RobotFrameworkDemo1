@@ -1,0 +1,14 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.testWithCustomLibrary :: To Validate the Login Page                     
+==============================================================================
+Validate Successful login and Select an Item                          | PASS |
+------------------------------------------------------------------------------
+Tests.testWithCustomLibrary :: To Validate the Login Page             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Tests                                                                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\zeapa\Repository\RobotFramework\RobotFramework1\pabot_results\2\output.xml

@@ -1,0 +1,4 @@
+*** Test Cases ***,${username},${password}
+Invalid User and Password,admin,admin123
+Invalid User,admin,learning
+Invalid Password,rahulshettyacademy,admihn123

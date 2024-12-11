@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-04T01:02:29.262092" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\zeapa\Repository\RobotFramework\RobotFramework1\tests">
+<suite id="s1-s1" name="testWithKeywordWith2Resources" source="C:\Users\zeapa\Repository\RobotFramework\RobotFramework1\tests\testWithKeywordWith2Resources.robot">
+<test id="s1-s1-t1" name="Validate Child Window Functionality" line="10">
+<kw name="Open Browser on Login portal" owner="keyword1" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:29.785955" level="INFO">Opening browser 'Chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-04T01:02:29.785106" elapsed="6.599325"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-04T01:02:36.384971" elapsed="0.575251"/>
+</kw>
+<status status="PASS" start="2024-12-04T01:02:29.783091" elapsed="7.177381"/>
+</kw>
+<kw name="Click on the Promotion Banner" owner="resource2">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BannerLink}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-04T01:02:36.964710" elapsed="0.672749"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:37.638450" level="INFO">Clicking element 'css:.blinkingText'.</msg>
+<arg>${BannerLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-04T01:02:37.637795" elapsed="7.184720"/>
+</kw>
+<status status="PASS" start="2024-12-04T01:02:36.960812" elapsed="7.861986"/>
+</kw>
+<kw name="Verify the New Window is Switched" owner="resource2">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-12-04T01:02:44.824250" elapsed="0.547798"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NavigationMenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.372378" elapsed="0.080738"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:45.453994" level="INFO">Verifying element 'css:.inner-box h1' contains exact text 'DOCUMENTS REQUEST'.</msg>
+<arg>${TitleHomePageElement}</arg>
+<arg>${NameHomePage}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.453486" elapsed="0.051543"/>
+</kw>
+<status status="PASS" start="2024-12-04T01:02:44.823209" elapsed="0.682047"/>
+</kw>
+<kw name="Catch the Email in the Message in the Home Page" owner="resource2">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EmailLabelMessage}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.506092" elapsed="0.033698"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:45.568937" level="INFO">${textMessage} = mentor@rahulshettyacademy.com</msg>
+<var>${textMessage}</var>
+<arg>${EmailLabelMessage}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.540145" elapsed="0.028893"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${textMessage}</arg>
+<arg>${ExpectedEmail}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.569376" elapsed="0.000622"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:45.570715" level="INFO">Verifying element 'css:.im-para.red a' contains exact text 'mentor@rahulshettyacademy.com'.</msg>
+<arg>${EmailLabelMessage}</arg>
+<arg>${ExpectedEmail}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.570307" elapsed="0.096661"/>
+</kw>
+<status status="PASS" start="2024-12-04T01:02:45.505590" elapsed="0.161627"/>
+</kw>
+<kw name="Catch the Email by Split Method" owner="resource2">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:45.712873" level="INFO">${textMessage} = Please email us at mentor@rahulshettyacademy.com with below template to receive response</msg>
+<var>${textMessage}</var>
+<arg>${TextLabelMessage}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.669248" elapsed="0.043733"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-04T01:02:45.713656" level="INFO">Please email us at mentor@rahulshettyacademy.com with below template to receive response</msg>
+<arg>${textMessage}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.713302" elapsed="0.000454"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-12-04T01:02:45.714396" level="INFO">@{SplitValue} = [ Please email us  |  mentor@rahulshettyacademy.com with below templ | e to receive response ]</msg>
+<var>@{SplitValue}</var>
+<arg>${textMessage}</arg>
+<arg>at</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.713988" elapsed="0.000477"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2024-12-04T01:02:45.715138" level="INFO">${text_splitted} =  mentor@rahulshettyacademy.com with below templ</msg>
+<var>${text_splitted}</var>
+<arg>${SplitValue}</arg>
+<arg>1</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.714735" elapsed="0.000469"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-04T01:02:45.715862" level="INFO"> mentor@rahulshettyacademy.com with below templ</msg>
+<arg>${text_splitted}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.715516" elapsed="0.000474"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-12-04T01:02:45.716733" level="INFO">@{SplitValue2} = [ mentor@rahulshettyacademy.com | with | below | templ ]</msg>
+<var>@{SplitValue2}</var>
+<arg>${text_splitted}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.716287" elapsed="0.000515"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2024-12-04T01:02:45.717541" level="INFO">${text_splitted2} = mentor@rahulshettyacademy.com</msg>
+<var>${text_splitted2}</var>
+<arg>${SplitValue2}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.717099" elapsed="0.000528"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-04T01:02:45.718350" level="INFO">mentor@rahulshettyacademy.com</msg>
+<arg>${text_splitted2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.717975" elapsed="0.000489"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-04T01:02:45.719170" level="INFO">mentor@rahulshettyacademy.com</msg>
+<arg>${ExpectedEmail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.718754" elapsed="0.000566"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${ExpectedEmail}</arg>
+<arg>${text_splitted2}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.719600" elapsed="0.000512"/>
+</kw>
+<status status="PASS" start="2024-12-04T01:02:45.667700" elapsed="0.052598"/>
+</kw>
+<kw name="Go to Main Window in the Browser" owner="resource2">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.722616" elapsed="0.033405"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-12-04T01:02:45.773829" level="INFO">Page title is 'LoginPage Practise | Rahul Shetty Academy'.</msg>
+<arg>${MainPageTitle}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.756369" elapsed="0.017645"/>
+</kw>
+<status status="PASS" start="2024-12-04T01:02:45.720835" elapsed="0.053378"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-04T01:02:47.778741" level="INFO">Slept 2 seconds.</msg>
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-04T01:02:45.774545" elapsed="2.004478"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-04T01:02:47.781725" elapsed="3.127779"/>
+</kw>
+<tag>openNewWindow</tag>
+<status status="PASS" start="2024-12-04T01:02:29.781419" elapsed="21.128467"/>
+</test>
+<doc>To Validate the Page</doc>
+<status status="PASS" start="2024-12-04T01:02:29.340919" elapsed="21.569781"/>
+</suite>
+<status status="PASS" start="2024-12-04T01:02:29.299725" elapsed="21.612424"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">openNewWindow</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="testWithKeywordWith2Resources">Tests.testWithKeywordWith2Resources</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
