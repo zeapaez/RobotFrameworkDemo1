@@ -9,3 +9,7 @@ To run it, go to the project path, and to run everything just type and later ENT
 ![image](https://github.com/user-attachments/assets/1e1087cb-f2ed-4284-8667-94ba2d46a6d4)
 
 ![image](https://github.com/user-attachments/assets/41e5bd88-1874-433d-b6a7-f2ea68ee0d4b)
+
+
+## Lenguajes de Programación:
+- Python
